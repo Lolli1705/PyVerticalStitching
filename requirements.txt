@@ -1,6 +1,7 @@
-numpy
-scikit-image
-matplotlib
-PyQt6
-pyqtgraph
-qimage2ndarray
+numpy==1.26.1
+scikit-image==0.22.0
+matplotlib==3.8.1
+PyQt6==6.6.0 
+pyqtgraph==0.13.3
+qimage2ndarray==1.10.0
+
