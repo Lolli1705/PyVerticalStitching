@@ -51,7 +51,7 @@ class Worker(QThread):
 
                 filenames = np.sort(getListOfFiles(self.input_path+dirnames[i]))
 
-                for j in range(0,len(filenames),100):
+                for j in range(0,len(filenames),1):
 
                     I = np.array(io.imread(filenames[j]),dtype='float')
 
