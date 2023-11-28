@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PyVerticalStitching</class>
+ <widget class="QWidget" name="PyVerticalStitching">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1708</width>
+    <height>747</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyVerticalStitching</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>450</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <widget class="QGroupBox" name="IO">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>441</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>I/O</string>
+        </property>
+        <widget class="QLabel" name="linput">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>60</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>input path:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="loutput">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>70</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>output path:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="leinput">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>27</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="leoutput">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>57</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pbinput">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>27</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pboutput">
+         <property name="geometry">
+          <rect>
+           <x>370</x>
+           <y>57</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>441</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Parameters</string>
+        </property>
+        <widget class="QLabel" name="lendslice">
+         <property name="geometry">
+          <rect>
+           <x>39</x>
+           <y>30</y>
+           <width>81</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>reference slice:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>60</y>
+           <width>80</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>overlap range:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>90</y>
+           <width>80</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>bit conversion:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>120</y>
+           <width>20</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>log:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="SBendslice">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>27</y>
+           <width>50</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="maximum">
+          <number>2047</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="SBoverstart">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>57</y>
+           <width>50</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>60</y>
+           <width>30</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>start</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="SBoverend">
+         <property name="geometry">
+          <rect>
+           <x>240</x>
+           <y>57</y>
+           <width>50</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>60</y>
+           <width>20</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>end</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="CB8">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>89</y>
+           <width>50</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>8-bit</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="CB16">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>90</y>
+           <width>50</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>16-bit</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="CB32">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>90</y>
+           <width>50</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>32-bit</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="CBlogsave">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>119</y>
+           <width>50</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>save</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="PBSet">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>120</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="PBCancel">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>120</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="PBShow">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>157</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Show</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>160</y>
+           <width>110</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Reference images:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="PBRun">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>190</y>
+           <width>41</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Run</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>370</y>
+          <width>441</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Log</string>
+        </property>
+        <widget class="QTextEdit" name="TElog">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>421</width>
+           <height>251</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Reference</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="QLRef">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>138</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Start</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="QLStart">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>End</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="QLEnd">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

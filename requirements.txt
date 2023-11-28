@@ -1,0 +1,6 @@
+numpy
+scikit-image
+matplotlib
+PyQt6
+pyqtgraph
+qimage2ndarray
